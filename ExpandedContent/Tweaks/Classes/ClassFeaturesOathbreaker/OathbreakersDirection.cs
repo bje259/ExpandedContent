@@ -237,7 +237,7 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesOathbreaker {
                         "lasts until the target dies or the Oathbreaker selects a new target.");
                     bp.m_DescriptionShort = Helpers.CreateString("$OathbreakersDirection.DescriptionShort", "At 1st level, the Oathbreaker can, as a move action, indicate an enemy in combat and rally her allies to " +
                         "focus on that target. The Oathbreaker and her allies gain a +1 bonus on weapon attack and damage rolls against the target.");
-                    bp.Ranks = 10;
+                    bp.Ranks = 1;
                     bp.IsClassFeature = true;
                     bp.m_Icon = ODIcon;
 

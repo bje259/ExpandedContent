@@ -276,13 +276,11 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                 "levels beyond 5th, to a total of four times per day at 17th level.");
                 bp.m_Icon = ProfaneWeaponIcon;
                 bp.Ranks = 1;
-                //bp.ReapplyOnLevelUp = true;
                 bp.IsClassFeature = true;
                 bp.ComponentsArray = WeaponBondFeature.ComponentsArray;
                 bp.AddComponent<AddFacts>(c => {
                     c.m_Facts = new BlueprintUnitFactReference[] { FiendishWeaponViciousChoice.ToReference<BlueprintUnitFactReference>() };
                 });
-                
             });
             var FiendishWeaponBondPlus2 = Helpers.CreateBlueprint<BlueprintFeature>("FiendishWeaponBondPlus2", bp => {
                 bp.SetName("Profane Weapon Bond (+2)");
@@ -516,7 +514,6 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                     AnimalCompanionFeatureHorse.ToReference<BlueprintFeatureReference>(),
                     AnimalCompanionFeatureHorse_PreorderBonus.ToReference<BlueprintFeatureReference>(),
                     CavalierMountFeatureWolf.ToReference<BlueprintFeatureReference>()
-                    //LongswordCompanion.ToReference<BlueprintFeatureReference>()
                 );
                 bp.AddComponent<AddFeatureOnApply>(c => {
                     c.m_Feature = DreadKnightAnimalCompanionProgression.ToReference<BlueprintFeatureReference>();

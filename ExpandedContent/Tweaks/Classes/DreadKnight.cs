@@ -11,7 +11,6 @@ using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints.Root;
 using Kingmaker.Designers.EventConditionActionSystem.Actions;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
@@ -29,7 +28,7 @@ namespace ExpandedContent.Tweaks.Classes {
     [HarmonyPatch(typeof(BlueprintsCache), "Init")]
     public class DreadKnightClassAdder {
         private static bool Initialized;
-        private static readonly BlueprintFeature AnimalCompanionRank = Resources.GetBlueprint<BlueprintFeature>("1670990255e4fe948a863bafd5dbda5d");
+       
 
 
 
@@ -189,7 +188,6 @@ namespace ExpandedContent.Tweaks.Classes {
             var AuraOfDespairFeature = Resources.GetModBlueprint<BlueprintFeature>("AuraOfDespairFeature");
             var DreadKnightCompanionSelection = Resources.GetModBlueprint<BlueprintFeatureSelection>("DreadKnightCompanionSelection");
             var FiendishWeaponBondProgression = Resources.GetModBlueprint<BlueprintProgression>("FiendishWeaponBondProgression");
-            var DreadKnightAnimalCompanionProgression = Resources.GetModBlueprint<BlueprintProgression>("DreadKnightAnimalCompanionProgression");
             var ChannelTouchOfProfaneCorruptionFeature = Resources.GetModBlueprint<BlueprintFeature>("ChannelTouchOfProfaneCorruptionFeature");
             var DreadKnightChannelNegativeEnergyFeature = Resources.GetModBlueprint<BlueprintFeature>("DreadKnightChannelNegativeEnergyFeature");
             var CrueltySelection1 = Resources.GetModBlueprint<BlueprintFeatureSelection>("CrueltySelection1");
@@ -229,7 +227,6 @@ namespace ExpandedContent.Tweaks.Classes {
                     "weapon a + 1 enhancement bonus.For every three levels beyond 5th, the weapon gains another + 1 enhancement bonus, to a maximum of + 6 at 20th level.");
                 bp.m_Icon = ProfaneWeaponIcon;
                 bp.Ranks = 1;
-                bp.ReapplyOnLevelUp = true;
                 bp.IsClassFeature = true;
                 bp.m_Features = new BlueprintFeatureReference[2] {
                 DreadKnightCompanionSelection.ToReference<BlueprintFeatureReference>(),
@@ -237,12 +234,6 @@ namespace ExpandedContent.Tweaks.Classes {
                 bp.m_AllFeatures = new BlueprintFeatureReference[2] {
                 DreadKnightCompanionSelection.ToReference<BlueprintFeatureReference>(),
                 FiendishWeaponBondProgression.ToReference<BlueprintFeatureReference>() };
-                bp.AddComponent<AddFeatureOnApply>(c => {
-                    c.m_Feature = DreadKnightAnimalCompanionProgression.ToReference<BlueprintFeatureReference>();
-                });
-                bp.AddComponent<AddFeatureOnApply>(c => {
-                    c.m_Feature = AnimalCompanionRank.ToReference<BlueprintFeatureReference>();
-                });
             });
 
 
@@ -299,7 +290,8 @@ namespace ExpandedContent.Tweaks.Classes {
             var MasterSkald = Resources.GetBlueprint<BlueprintFeature>("ae4d45a39a91dee4fb4200d7a677d9a7");
             var SkaldRagePowerSelection = Resources.GetBlueprint<BlueprintFeatureSelection>("2476514e31791394fa140f1a07941c96");
             var IconCommand = AssetLoader.LoadInternal("Skills", "Icon_Command.png");
-            var ConquerorInspiredRageFeature = Helpers.CreateBlueprint<BlueprintFeature>("ConquerorInspiredageFeature", bp => {
+
+            var ConquerorInspiredRageFeature = Helpers.CreateBlueprint<BlueprintFeature>("ConquerorInspiredRageFeature", bp => {
                 bp.SetName("Profane Commandment");
                 bp.SetDescription("At 1st level, a conqueror receives the ability to incite rage in those he rules over, as per the skald inspired rage class feature. " +
                     "Affected allies gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:MeleeAttack}melee attack{/g} and {g|Encyclopedia:Damage}damage rolls{/g} and a +1 " +
@@ -309,7 +301,7 @@ namespace ExpandedContent.Tweaks.Classes {
                     "{g|Encyclopedia:Attack}attack{/g} and damage increase by 1. (Unlike the barbarian's rage ability, those affected are not fatigued after the song ends.)");
                 bp.m_DescriptionShort = Helpers.CreateString($"ConquerorInspiredageFeature.Description", "At 1st level, a conqueror receives the ability to incite rage in those he rules over, as the skald inspired rage class feature.");
                 bp.m_Icon = IconCommand;
-                bp.m_Icon = InspiredRage.Icon;
+               
                 bp.Ranks = 1;
                 bp.IsClassFeature = true;
                 bp.AddComponent<AddFacts>(c => {
@@ -365,7 +357,7 @@ namespace ExpandedContent.Tweaks.Classes {
 
                 };
                 bp.AddFeatures = new LevelEntry[] {
-                    Helpers.LevelEntry(1, InspiredRage, RagingSong),
+                    Helpers.LevelEntry(1, ConquerorInspiredRageFeature, RagingSong),
                     Helpers.LevelEntry(3, FiendishMaw1d6Feature),
                     Helpers.LevelEntry(6, FiendTotemFeature, SongOfStrength),
                     Helpers.LevelEntry(7, FiendishMaw1d8Feature, ConquerorProfaneConquestFeature, SkaldMovePerformance),
@@ -391,7 +383,7 @@ namespace ExpandedContent.Tweaks.Classes {
                  Helpers.CreateUIGroup(SkaldRagePowerSelection, SkaldRagePowerSelection, SkaldRagePowerSelection),
                  Helpers.CreateUIGroup(SongOfStrength, SongOfStrength, DirgeOfDoom, SongOfTheFallen),
                  Helpers.CreateUIGroup(FiendTotemFeature, FiendTotemGreaterFeature),
-                 Helpers.CreateUIGroup(InspiredRage, SkaldMovePerformance, SkaldSwiftPerformance, ProfaneLordFeature),
+                 Helpers.CreateUIGroup(ConquerorInspiredRageFeature, SkaldMovePerformance, SkaldSwiftPerformance, ProfaneLordFeature),
 
              };
 

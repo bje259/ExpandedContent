@@ -200,14 +200,11 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesOathbreaker {
                     c.OrientationAnchor = FiendishSmiteGoodAbility.GetComponent<AbilitySpawnFx>().OrientationAnchor;
                 });
                 bp.AddComponent<AbilityResourceLogic>(c => {
-                    var limitlessSmite = Resources.GetBlueprint<BlueprintFeature>("12c7874d28da45268a019fc86ccbf9d5");
-                    var limSmiFactRef = limitlessSmite.ToReference<BlueprintUnitFactReference>();
                     c.m_RequiredResource = OathbreakersBaneResource.ToReference<BlueprintAbilityResourceReference>();
                     c.m_IsSpendResource = true;
                     c.Amount = 1;
                     c.ResourceCostIncreasingFacts = new List<BlueprintUnitFactReference>();
                     c.ResourceCostDecreasingFacts = new List<BlueprintUnitFactReference>();
-                    c.ResourceCostDecreasingFacts.Add(limSmiFactRef);
                 });
             });
 
