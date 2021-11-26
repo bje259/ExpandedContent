@@ -47,11 +47,6 @@ namespace ExpandedContent.Utilities {
                 }
             }
         }
-
-        internal static object CreateSpellLevelEntry(object count) {
-            throw new NotImplementedException();
-        }
-
         static readonly Lazy<BlueprintSpellList[]> specialistSchoolList = new Lazy<BlueprintSpellList[]>(() => {
             var result = new BlueprintSpellList[(int)SpellSchool.Universalist + 1];
             result[(int)SpellSchool.Abjuration] = SpellList.WizardAbjurationSpellList;

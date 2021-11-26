@@ -298,7 +298,35 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                 bp.AddComponent<PrerequisiteFeature>(c => { c.m_Feature = SinfulAbsolutionFeature.ToReference<BlueprintFeatureReference>(); });
 
             });
+
+            var LimitlessSin = Helpers.CreateBlueprint<BlueprintFeature>("LimitlessSin", bp => {
+                bp.SetName("Limitless Sin");
+                bp.SetDescription("You have found a way to force dark powers to grant you unlimited uses of the Sinful Absolution ability. " +
+                    "\nBenefit: You can use Sinful Absolution a number of additional times per day equal to half your mythic rank.");
+                bp.m_Icon = SinfulAbsIcon;
+                bp.Groups = new FeatureGroup[] { FeatureGroup.MythicAbility };
+                bp.Ranks = 1;
+                bp.ReapplyOnLevelUp = true;
+                bp.IsClassFeature = true;
+                /*var ability = Resources.GetBlueprint<BlueprintAbility>("7b955550805a4403959e65bd04e26854");
+                ability.RemoveComponents<AbilityResourceLogic>();
+                ability.AddComponent<AbilityResourceLogic>( c => {
+                    c.m_RequiredResource = SinfulAbsolutionResource.ToReference<BlueprintAbilityResourceReference>();
+                    c.m_IsSpendResource = true;
+                    c.Amount = 0;
+                    c.ResourceCostIncreasingFacts = new List<BlueprintUnitFactReference>();
+                    c.ResourceCostDecreasingFacts = new List<BlueprintUnitFactReference>();
+                });
+                */
+                bp.AddComponent<PrerequisiteFeature>(c => { c.m_Feature = SinfulAbsolutionFeature.ToReference<BlueprintFeatureReference>(); });
+
+            });
+            
             MythicAbilitySelection.m_AllFeatures = MythicAbilitySelection.m_AllFeatures.AppendToArray(AbundantSin.ToReference<BlueprintFeatureReference>());
+            MythicAbilitySelection.m_AllFeatures = MythicAbilitySelection.m_AllFeatures.AppendToArray(LimitlessSin.ToReference<BlueprintFeatureReference>());
+            var ability = Resources.GetBlueprint<BlueprintAbility>("7b955550805a4403959e65bd04e26854");
+            var logic = ability.GetComponent<AbilityResourceLogic>();
+            logic.ResourceCostDecreasingFacts.Add(LimitlessSin.ToReference<BlueprintUnitFactReference>());
         }
     }
 }

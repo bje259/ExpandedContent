@@ -23,8 +23,7 @@ namespace ExpandedContent.Tweaks
                 if (Initialized) return;
                 Initialized = true;
 
-             
-                Archetypes.LivingScripture.AddLivingScripture();
+                
 
                 RacialArchetypes.Cruoromancer.AllowCruoromancerArchetype();
                 RacialArchetypes.CavalierOfThePaw.AllowCavalierOfThePaw();
@@ -38,7 +37,7 @@ namespace ExpandedContent.Tweaks
                 RacialArchetypes.StudentOfStone.AllowStudentOfStoneArchetype();
                 RacialArchetypes.WildlandShaman.AllowWildlandShamanArchetype();
                 RacialArchetypes.PhantasmalMage.AllowPhantasmalMageArchetype();
-        
+
                 Backgrounds.ArchdukeOfCheliax.AddBackgroundArchdukeOfCheliax();
                 
                 
@@ -56,11 +55,8 @@ namespace ExpandedContent.Tweaks
 
 
                 Deities.Apsu.AddApsu();
-
-                Deities.Dahak.AddDahakFeature();
-                Deities.Daikitsu.AddDaikitsuFeature();
-                Deities.Wukong.AddWukongFeature();
-                Deities.Fumeiyoshi.AddFumeiyoshiFeature();
+                
+                
                 Deities.GreenFaith.AddGreenFaith();
                
                 Deities.PatchPulura.AddPulura();
