@@ -11,6 +11,7 @@ using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Blueprints.Root;
 using Kingmaker.Designers.EventConditionActionSystem.Actions;
 using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
@@ -28,7 +29,7 @@ namespace ExpandedContent.Tweaks.Classes {
     [HarmonyPatch(typeof(BlueprintsCache), "Init")]
     public class DreadKnightClassAdder {
         private static bool Initialized;
-       
+        private static readonly BlueprintFeature AnimalCompanionRank = Resources.GetBlueprint<BlueprintFeature>("1670990255e4fe948a863bafd5dbda5d");
 
 
 
@@ -188,6 +189,7 @@ namespace ExpandedContent.Tweaks.Classes {
             var AuraOfDespairFeature = Resources.GetModBlueprint<BlueprintFeature>("AuraOfDespairFeature");
             var DreadKnightCompanionSelection = Resources.GetModBlueprint<BlueprintFeatureSelection>("DreadKnightCompanionSelection");
             var FiendishWeaponBondProgression = Resources.GetModBlueprint<BlueprintProgression>("FiendishWeaponBondProgression");
+            var DreadKnightAnimalCompanionProgression = Resources.GetModBlueprint<BlueprintProgression>("DreadKnightAnimalCompanionProgression");
             var ChannelTouchOfProfaneCorruptionFeature = Resources.GetModBlueprint<BlueprintFeature>("ChannelTouchOfProfaneCorruptionFeature");
             var DreadKnightChannelNegativeEnergyFeature = Resources.GetModBlueprint<BlueprintFeature>("DreadKnightChannelNegativeEnergyFeature");
             var CrueltySelection1 = Resources.GetModBlueprint<BlueprintFeatureSelection>("CrueltySelection1");
@@ -234,6 +236,13 @@ namespace ExpandedContent.Tweaks.Classes {
                 bp.m_AllFeatures = new BlueprintFeatureReference[2] {
                 DreadKnightCompanionSelection.ToReference<BlueprintFeatureReference>(),
                 FiendishWeaponBondProgression.ToReference<BlueprintFeatureReference>() };
+                bp.AddComponent<AddFeatureOnApply>(c => {
+                    c.m_Feature = DreadKnightAnimalCompanionProgression.ToReference<BlueprintFeatureReference>();
+                });
+                bp.AddComponent<AddFeatureOnApply>(c => {
+                    c.m_Feature = AnimalCompanionRank.ToReference<BlueprintFeatureReference>();
+                });
+
             });
 
 

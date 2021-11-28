@@ -65,8 +65,15 @@
       <HintPath>packages\Lib.Harmony.2.1.1\lib\net472\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(SolutionDir)lib\Assembly-CSharp_public.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp_public, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityModManager\Assembly-CSharp_public.dll</HintPath>
+    </Reference>
+    <Reference Include="BlueprintCore, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b3a43b961fa966af, processorArchitecture=MSIL">
+      <HintPath>packages\WW-Blueprint-Core.1.1.0\lib\net472\BlueprintCore.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
@@ -95,8 +102,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UniRx">
-      <HintPath>$(SolutionDir)lib\UniRx_public.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UniRx.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UniRx_public, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityModManager\UniRx_public.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -134,48 +145,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlueprintCore\Abilities\Restrictions\New\TargetHasBuffsFromCaster.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\ActionsBuilder.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\AreaEx\ActionsBuilderAreaEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\AVEx\ActionsBuilderAVEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\BasicEx\ActionsBuilderBasicEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\ContextEx\ActionsBuilderContextEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\KingdomEx\ActionsBuilderKingdomEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\MiscEx\ActionsBuilderMiscEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\NewEx\ActionsBuilderNewEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\StoryEx\ActionsBuilderStoryEx.cs" />
-    <Compile Include="BlueprintCore\Actions\Builder\UpgraderEx\ActionsBuilderUpgraderEx.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Abilities\AbilityAreaEffectConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Abilities\AbilityConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Abilities\AbilityResourceConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\BaseBlueprintConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\BlueprintConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\BlueprintTool.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Buffs\BuffConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Classes\ArchetypeConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Classes\BaseFeatureConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Classes\FeatureConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Classes\Selection\FeatureSelectionConfigurator.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Components\ContextRankConfigs.cs" />
-    <Compile Include="BlueprintCore\Blueprints\Facts\BlueprintUnitFactConfigurator.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\AreaEx\ConditionsBuilderAreaEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\BasicEx\ConditionsBuilderBasicEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\ConditionsBuilder.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\ContextEx\ConditionsBuilderContextEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\KingdomEx\ConditionsBuilderKingdomEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\MiscEx\ConditionsBuilderMiscEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\NewEx\ConditionsBuilderNewEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\Builder\StoryEx\ConditionsBuilderStoryEx.cs" />
-    <Compile Include="BlueprintCore\Conditions\New\TargetInMeleeRange.cs" />
-    <Compile Include="BlueprintCore\Utils\Attributes.cs" />
-    <Compile Include="BlueprintCore\Utils\CommonTool.cs" />
-    <Compile Include="BlueprintCore\Utils\Constants.cs" />
-    <Compile Include="BlueprintCore\Utils\ContextDuration.cs" />
-    <Compile Include="BlueprintCore\Utils\ContextValues.cs" />
-    <Compile Include="BlueprintCore\Utils\ElementTool.cs" />
-    <Compile Include="BlueprintCore\Utils\LogWrapper.cs" />
-    <Compile Include="BlueprintCore\Utils\PrereqTool.cs" />
-    <Compile Include="BlueprintCore\Utils\Validator.cs" />
     <Compile Include="Config\AddedContent.cs" />
     <Compile Include="Config\Blueprints.cs" />
     <Compile Include="Config\ICollapseableGroup.cs" />
@@ -288,6 +257,9 @@
     </None>
     <EmbeddedResource Include="Config\AddedContent.json" />
     <EmbeddedResource Include="Config\Blueprints.json" />
+    <None Include="BlueprintCore\changes.md" />
+    <None Include="BlueprintCore\LICENSE" />
+    <None Include="BlueprintCore\README.md" />
     <None Include="Info.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
