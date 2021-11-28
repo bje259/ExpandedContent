@@ -63,6 +63,7 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
             var NegativeEnergyAffinity = Resources.GetBlueprint<BlueprintFeature>("d5ee498e19722854198439629c1841a5");
             var DreadKnightClass = Resources.GetModBlueprint<BlueprintCharacterClass>("DreadknightClass");
             var FatiguedBuff = Resources.GetBlueprint<BlueprintBuff>("e6f2fc5d73d88064583cb828801212f4");
+            var CustomDCValue = 40;
 
             var FiendishSmiteGoodBuff = Resources.GetBlueprint<BlueprintBuff>("a9035e49d6d79a64eaec321f2cb629a8");
             var CrueltyFatiguedBuff = Helpers.CreateBlueprint<BlueprintBuff>("CrueltyFatiguedBuff", bp => {
@@ -88,7 +89,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -150,7 +152,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -221,7 +224,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -291,7 +295,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -348,7 +353,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -408,7 +414,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -474,7 +481,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -533,7 +541,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -592,7 +601,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -659,7 +669,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -726,7 +737,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -793,7 +805,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -860,7 +873,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
@@ -928,7 +942,8 @@ namespace ExpandedContent.Tweaks.Classes.ClassFeaturesDreadKnight {
                             new ContextActionSavingThrow() {
                                 m_ConditionalDCIncrease = new ContextActionSavingThrow.ConditionalDCIncrease[0],
                                 Type = SavingThrowType.Fortitude,
-                                CustomDC = new ContextValue(),
+                                HasCustomDC = true,
+                                CustomDC = CustomDCValue,
                                 Actions = Helpers.CreateActionList(
                                                 new ContextActionConditionalSaved() {
                                                     Succeed = new ActionList(),
