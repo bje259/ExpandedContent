@@ -63,6 +63,7 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Lib.Harmony.2.1.1\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -71,17 +72,21 @@
     <Reference Include="Assembly-CSharp_public, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityModManager\Assembly-CSharp_public.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BlueprintCore, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b3a43b961fa966af, processorArchitecture=MSIL">
       <HintPath>packages\WW-Blueprint-Core.1.1.0\lib\net472\BlueprintCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="ModKit, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ModKit.1.0.8\lib\net472\ModKit.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Owlcat.Runtime.Core">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Owlcat.Runtime.Core.dll</HintPath>
@@ -108,6 +113,7 @@
     <Reference Include="UniRx_public, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityModManager\UniRx_public.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
